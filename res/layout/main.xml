@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:weightSum="3">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Exercise Tracker" android:id="@+id/imageButton" android:onClick="exctrackbutton"/>
+
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Timer" android:id="@+id/btnTimer" android:onClick="timerbutton"
+                android:longClickable="false"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Weight Converter" android:id="@+id/btnExtra1"/>
+                />
+
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="BMI Calculator" android:id="@+id/btnExtra2"/>
+                 />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Weight Tracker" android:id="@+id/btnExtra3"/>
+               />
+
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Settings" android:id="@+id/Extra4"/>
+                 />
+
+    </LinearLayout>
+
+</LinearLayout>

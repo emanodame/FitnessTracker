@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="match_parent" android:weightSum="1" android:id="@+id/statslayout">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="23dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Bicep Curl Stats!"
+                android:id="@+id/textView" android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <TableRow
+            android:layout_width="fill_parent"
+            android:focusable="false"
+            android:layout_height="wrap_content" android:id="@+id/tableRow"
+            android:layout_alignParentTop="true" android:layout_alignEnd="@+id/tableRow3"
+            android:layout_marginTop="49dp" android:layout_alignBottom="@+id/tableRow3"
+            android:focusableInTouchMode="false">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="    Date"
+                android:layout_weight="0.22"
+                android:id="@+id/btnDate"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="           Weight"
+                android:layout_weight="0.22"
+                android:id="@+id/txtWeight"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Reps"
+                android:layout_weight="0.22"
+                android:id="@+id/btnReps"
+                />
+
+
+    </TableRow>
+
+
+    <TableRow
+            android:layout_width="fill_parent"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_height="wrap_content" android:id="@+id/tableRow3"
+            android:layout_marginStart="72dp">
+    </TableRow>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" android:id="@+id/xxx">
+
+        <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/statsview"
+                android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+</LinearLayout>

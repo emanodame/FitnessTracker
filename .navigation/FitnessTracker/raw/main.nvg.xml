@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.FitnessTracker.Exercise"/>
+      <point      
+        x = "1600"      
+        y = "480"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.FitnessTracker.MyTimer"/>
+      <point      
+        x = "2080"      
+        y = "320"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.FitnessTracker.ExerciseTracker"/>
+      <point      
+        x = "640"      
+        y = "160"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "MyActivity"/>
+      <point      
+        x = "650"      
+        y = "250"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

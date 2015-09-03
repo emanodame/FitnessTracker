@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_gravity="center_horizontal">
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:id="@+id/mainrow"
+                android:layout_alignParentEnd="true">
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:text="Date"
+                    android:id="@+id/editDate" android:layout_weight="0.22" android:layout_gravity="center_vertical"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/editWeight" android:layout_weight="0.22" android:layout_gravity="center_vertical"
+                    android:text="kg"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/editReps"
+                    android:layout_weight="0.22" android:layout_gravity="center_vertical" android:text="reps"/>
+
+        </TableRow>
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:id="@+id/tableRow2" android:layout_below="@+id/mainrow" android:layout_alignParentStart="true">
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:layout_weight="1"
+                    android:id="@+id/btnSave"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:layout_weight="1"
+                    android:id="@+id/btnCancel"/>
+        </TableRow>
+
+
+    </RelativeLayout>
+</LinearLayout>

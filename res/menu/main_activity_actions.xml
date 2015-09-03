@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/addinfo"
+          android:title="Add"
+          android:showAsAction="never"/>
+
+    <item android:id="@+id/graph"
+          android:title="Graph"
+          android:showAsAction="never"/>
+
+    <item android:id="@+id/notes"
+          android:title="Notes"
+          android:showAsAction="never"/>
+
+    <item android:id="@+id/delete"
+          android:title="Delete DB"
+          android:showAsAction="never"/>
+
+</menu>
