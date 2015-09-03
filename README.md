@@ -4,7 +4,7 @@ As I get more proficient with Java I will also increase the features of the appl
 
 **Version 1.0 released 3rd September 2015**
 
-Timer (From one minute is added)
+Timer (From one minute is added). Vibration on 0 secs.
 
 With SQLite, fully database accessibility is featured on the app. You can save/delete Date,Weight and Reps on 13 different specific exercises.
 
