@@ -29,7 +29,10 @@ public class MyActivity extends Activity {
         startActivity(weighttrack);
     }
 
-
+    public void weightconverterbutton(View v){
+        Intent weightconvert = new Intent(this,WeightConverter.class);
+        startActivity(weightconvert);
+    }
 
 }
 
