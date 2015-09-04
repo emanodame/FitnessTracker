@@ -24,6 +24,10 @@ public class MyActivity extends Activity {
         startActivity(timer);
 
     }
+    public void weighttrackbutton(View v){
+        Intent weighttrack = new Intent(this,WeightTracker.class);
+        startActivity(weighttrack);
+    }
 
 
 
