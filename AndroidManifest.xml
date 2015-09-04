@@ -83,6 +83,9 @@
         <activity android:name=".WeightTracker"
                   android:label="Weight Tracker">
         </activity>
+        <activity android:name=".WeightConverter"
+                  android:label="Emmanuel's Weight Converter Boyss">
+        </activity>
 
 
     </application>
