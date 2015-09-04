@@ -44,7 +44,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 style="?android:attr/borderlessButtonStyle"
-                android:text="Weight Converter" android:id="@+id/btnExtra1"/>
+                android:text="Weight Converter" android:id="@+id/btnExtra1" android:onClick="weightconverterbutton"/>
                 />
 
         <Button
@@ -69,7 +69,8 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 style="?android:attr/borderlessButtonStyle"
-                android:text="Weight Tracker" android:id="@+id/btnExtra3"/>
+                android:text="Weight Tracker" android:id="@+id/btnExtra3" android:onClick="weighttrackbutton"
+                android:nestedScrollingEnabled="false"/>
                />
 
         <Button
