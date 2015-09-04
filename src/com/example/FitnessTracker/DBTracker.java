@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class DBTracker {
 
 
-    private static final int DATABASE_VERSION = 9001;
+    private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "Tracker";
 
     public static final String DATABASE_TABLE0 = "Dumbbell_Press";
@@ -30,6 +30,7 @@ public class DBTracker {
     public static final String DATABASE_TABLE11 = "Leg_Press";
     public static final String DATABASE_TABLE12 = "Leg_Extensions";
     public static final String DATABASE_TABLE13 = "Leg_Curl";
+    public static final String DATABASE_TABLE14 = "Weight_Tracker";
 
     public static final String KEY_ROWID = "_id";
     public static final String COL_1 = "date";
@@ -37,6 +38,7 @@ public class DBTracker {
     public static final String COL_3 = "reps";
 
     private static  final String[] ALL_KEYS = new String[] {KEY_ROWID,COL_1,COL_2,COL_3};
+    private static final String[] ALL_KEYS1 = new String[] {KEY_ROWID,COL_1,COL_2};
 
     private static final String DATABASE_CREATE0 = //Make multiples of this code. Each one having different name.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE0
@@ -135,6 +137,20 @@ public class DBTracker {
                     + COL_3 + " TEXT"
                     + ");";
 
+    private static final String DATABASE_CREATE13 = //Make multiples of this code. Each one having different name.
+            "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE13
+                    + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    + COL_1 + " TEXT, "
+                    + COL_2 + " TEXT, "
+                    + COL_3 + " TEXT"
+                    + ");";
+
+    private static final String DATABASE_CREATE14 = //Make multiples of this code. Each one having different name.
+            "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE14
+                    + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    + COL_1 + " TEXT, "
+                    + COL_2 + " TEXT"
+                    + ");";
 
     private final Context context;
     private DatabaseHelper DBHelper;
@@ -374,6 +390,22 @@ public class DBTracker {
         c.close();
     }
 
+    public boolean deleteRowweighttracker(long rowId) {
+        String where = KEY_ROWID + "=" + rowId;
+        return db.delete(DATABASE_TABLE14, where, null) !=0;
+    }
+
+    public void deleteAllweighttracker() {
+        Cursor c = getweighttracker();
+        long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
+        if (c.moveToFirst()){
+            do {
+                deleteRowweighttracker(c.getLong((int) rowId));
+            }while(c.moveToNext());
+        }
+        c.close();
+    }
+
 
     private static class DatabaseHelper extends SQLiteOpenHelper {
         DatabaseHelper(Context context) {
@@ -396,6 +428,9 @@ public class DBTracker {
             db.execSQL(DATABASE_CREATE10);
             db.execSQL(DATABASE_CREATE11);
             db.execSQL(DATABASE_CREATE12);
+            db.execSQL(DATABASE_CREATE13);
+            db.execSQL(DATABASE_CREATE14);
+
         }
 
         @Override
@@ -649,6 +684,23 @@ public class DBTracker {
         }
         return c;
     }
-
+    public long insertweighttracker(String date, String weight) throws SQLException{
+        ContentValues initialValues = new ContentValues();
+        initialValues.put(COL_1,date);
+        initialValues.put(COL_2,weight);
+        return db.insert(DATABASE_TABLE14,null,initialValues);
     }
+
+    public Cursor getweighttracker() {
+        String where = null;
+        Cursor c = db.query(true,DATABASE_TABLE14, ALL_KEYS1, where, null,null,null,null,null);
+        if(c != null){
+            c.moveToFirst();
+        }
+        return c;
+    }
+
+
+
+}
 
