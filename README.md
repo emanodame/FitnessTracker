@@ -10,6 +10,6 @@ With SQLite, fully database accessibility is featured on the app. You can save/d
 
 Note funtionality on each exercise.
 
-++Version 1.1 released 4th September 2015**
+**Version 1.1 released 4th September 2015**
 
 You can now record and track your Weight. Weight can be saved/deleted using SQLite.
