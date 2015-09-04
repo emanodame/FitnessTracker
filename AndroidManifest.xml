@@ -80,6 +80,9 @@
         <activity android:name=".LegCurl"
                   android:label=" ">
         </activity>
+        <activity android:name=".WeightTracker"
+                  android:label="Weight Tracker">
+        </activity>
 
 
     </application>
