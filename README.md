@@ -13,3 +13,7 @@ Note funtionality on each exercise.
 **Version 1.1 released 4th September 2015**
 
 You can now record and track your Weight. Weight can be saved/deleted using SQLite.
+
+**Version 1.5 released 4th September 2015**
+
+Simple Weight Converter has been added. You can now calculate Pounds from Kilograms vise versa. 
