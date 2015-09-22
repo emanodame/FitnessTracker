@@ -15,6 +15,7 @@ import java.sql.SQLException;
 public class Hammercurls extends Exercise{
     @Override
     public  void onCreate(Bundle savedInstanceState) {
+        //Creates the Content view specifically for Hammercurls. Opens Hammercurls Table.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hammercurls);
         try {
@@ -29,8 +30,9 @@ public class Hammercurls extends Exercise{
 
     @Override
     public void insert() {
+        //Inserts Hammercurls stats into database.
         try {
-            dbtrack.inserthammercurls(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
+            dbtrack.insertHammercurls(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -38,7 +40,8 @@ public class Hammercurls extends Exercise{
 
     @Override
     public void populateTrackListView() {
-        Cursor cursor = dbtrack.gethammercurls();
+        //Gets stats from database.
+        Cursor cursor = dbtrack.getHammercurls();
         String[] fromFieldnames = new String[]{DBTracker.COL_1, DBTracker.COL_2, DBTracker.COL_3};
         int[] toViewIDs = new int[]{R.id.btnDate, R.id.txtWeight, R.id.btnReps};
         SimpleCursorAdapter myCursorAdapter;
@@ -50,16 +53,18 @@ public class Hammercurls extends Exercise{
 
     @Override
     public void delete() {
-        dbtrack.deleteAllhammercurls();
+        //Delete the whole Hammercurls database.
+        dbtrack.deleteAllHammercurls();
     }
 
     @Override
     public boolean longClick() {
+        //Long click Delete. This deletes a specific row upon long click.
         ListView myList = (ListView)findViewById(R.id.statsview);
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                dbtrack.deleteRowhammercurls(l);
+                dbtrack.deleteRowHammercurls(l);
                 populateTrackListView();
 
             }
