@@ -30,7 +30,6 @@ public class DBTracker {
     public static final String DATABASE_TABLE11 = "Leg_Press";
     public static final String DATABASE_TABLE12 = "Leg_Extensions";
     public static final String DATABASE_TABLE13 = "Leg_Curl";
-    public static final String DATABASE_TABLE14 = "Weight_Tracker";
 
     public static final String KEY_ROWID = "_id";
     public static final String COL_1 = "date";
@@ -38,9 +37,8 @@ public class DBTracker {
     public static final String COL_3 = "reps";
 
     private static  final String[] ALL_KEYS = new String[] {KEY_ROWID,COL_1,COL_2,COL_3};
-    private static final String[] ALL_KEYS1 = new String[] {KEY_ROWID,COL_1,COL_2};
 
-    private static final String DATABASE_CREATE0 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE0 = //Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE0
             + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + COL_1 + " TEXT, "
@@ -48,7 +46,7 @@ public class DBTracker {
             + COL_3 + " TEXT"
             + ");";
 
-    private static final String DATABASE_CREATE1 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE1 =//Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE1
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + COL_1 + " TEXT, "
@@ -56,7 +54,7 @@ public class DBTracker {
                     + COL_3 + " TEXT"
                     + ");";
 
-    private static final String DATABASE_CREATE2 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE2 = //Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE2
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + COL_1 + " TEXT, "
@@ -64,7 +62,7 @@ public class DBTracker {
                     + COL_3 + " TEXT"
                     + ");";
 
-    private static final String DATABASE_CREATE3 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE3 = //Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE3
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + COL_1 + " TEXT, "
@@ -72,7 +70,7 @@ public class DBTracker {
                     + COL_3 + " TEXT"
                     + ");";
 
-    private static final String DATABASE_CREATE4 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE4 = //Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE4
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + COL_1 + " TEXT, "
@@ -80,56 +78,56 @@ public class DBTracker {
                     + COL_3 + " TEXT"
                     + ");";
 
-    private static final String DATABASE_CREATE5 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE5 =//Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE5
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + COL_1 + " TEXT, "
                     + COL_2 + " TEXT, "
                     + COL_3 + " TEXT"
                     + ");";
-    private static final String DATABASE_CREATE6 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE6 = //Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE6
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + COL_1 + " TEXT, "
                     + COL_2 + " TEXT, "
                     + COL_3 + " TEXT"
                     + ");";
-    private static final String DATABASE_CREATE7 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE7 = //Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE7
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + COL_1 + " TEXT, "
                     + COL_2 + " TEXT, "
                     + COL_3 + " TEXT"
                     + ");";
-    private static final String DATABASE_CREATE8 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE8 =//Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE8
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + COL_1 + " TEXT, "
                     + COL_2 + " TEXT, "
                     + COL_3 + " TEXT"
                     + ");";
-    private static final String DATABASE_CREATE9 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE9 = //Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE9
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + COL_1 + " TEXT, "
                     + COL_2 + " TEXT, "
                     + COL_3 + " TEXT"
                     + ");";
-    private static final String DATABASE_CREATE10 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE10 = //Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE10
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + COL_1 + " TEXT, "
                     + COL_2 + " TEXT, "
                     + COL_3 + " TEXT"
                     + ");";
-    private static final String DATABASE_CREATE11 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE11 = //Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE11
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + COL_1 + " TEXT, "
                     + COL_2 + " TEXT, "
                     + COL_3 + " TEXT"
                     + ");";
-    private static final String DATABASE_CREATE12 = //Make multiples of this code. Each one having different name.
+    private static final String DATABASE_CREATE12 = //Make multiples of this code. Each one specific for a different exercise.
             "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE12
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + COL_1 + " TEXT, "
@@ -137,20 +135,6 @@ public class DBTracker {
                     + COL_3 + " TEXT"
                     + ");";
 
-    private static final String DATABASE_CREATE13 = //Make multiples of this code. Each one having different name.
-            "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE13
-                    + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    + COL_1 + " TEXT, "
-                    + COL_2 + " TEXT, "
-                    + COL_3 + " TEXT"
-                    + ");";
-
-    private static final String DATABASE_CREATE14 = //Make multiples of this code. Each one having different name.
-            "CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE14
-                    + " (" + KEY_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    + COL_1 + " TEXT, "
-                    + COL_2 + " TEXT"
-                    + ");";
 
     private final Context context;
     private DatabaseHelper DBHelper;
@@ -162,14 +146,19 @@ public class DBTracker {
         DBHelper = new DatabaseHelper(context);
     }
 
+    /*
+    Below is code for specific Database functions. Add/Delete/Retrieve. All different for each database.
+     */
 
+
+    //Code for deleting a specific row.
     public boolean deleteRowDumbbellPress(long rowId) {
         String where = KEY_ROWID + "=" + rowId;
         return db.delete(DATABASE_TABLE0, where, null) !=0;
     }
-
+    //Code for deleting the contents of database.
     public void deleteAllDumbbellPress() {
-        Cursor c = getdumbbellpress();
+        Cursor c = getDumbbellPress();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
@@ -186,7 +175,7 @@ public class DBTracker {
     }
 
     public void deleteAllDips() {
-        Cursor c = gettridips();
+        Cursor c = getTriDips();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
@@ -196,97 +185,93 @@ public class DBTracker {
         c.close();
     }
 
-    public boolean deleteRowidumbbellpress(long rowId) {
-        String where = KEY_ROWID + "=" + rowId;
-        return db.delete(DATABASE_TABLE2, where, null) !=0;
-    }
 
-    public void deleteAllidumbbellpress() {
-        Cursor c = getidumbellpress();
+    public void deleteAllDumbellPress() {
+        Cursor c = getiDumbellPress();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
-                deleteRowidumbbellpress(c.getLong((int) rowId));
+                deleteRowDumbbellPress(c.getLong((int) rowId));
             }while(c.moveToNext());
         }
         c.close();
     }
 
-    public boolean deleteRowtriceppulldown(long rowId) {
+    public boolean deleteRowTricepPulldown(long rowId) {
         String where = KEY_ROWID + "=" + rowId;
         return db.delete(DATABASE_TABLE3, where, null) !=0;
     }
 
-    public void deleteAlltripulldown() {
-        Cursor c = gettripulldown();
+    public void deleteAllTriPulldown() {
+        Cursor c = getTriPulldown();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
-                deleteRowtriceppulldown(c.getLong((int) rowId));
+                deleteRowTricepPulldown(c.getLong((int) rowId));
             }while(c.moveToNext());
         }
         c.close();
     }
 
-    public boolean deleteRowmachinechestpress(long rowId) {
+    public boolean deleteRowMachineChestpress(long rowId) {
         String where = KEY_ROWID + "=" + rowId;
         return db.delete(DATABASE_TABLE4, where, null) !=0;
     }
 
-    public void deleteAllmachinechestpress() {
-        Cursor c = getmchestpress();
+    public void deleteAllMachineChestpress() {
+        Cursor c = getMchestPress();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
-                deleteRowmachinechestpress(c.getLong((int) rowId));
+                deleteRowMachineChestpress(c.getLong((int) rowId));
             }while(c.moveToNext());
         }
         c.close();
     }
 
-    public boolean deletechestfly(long rowId) {
+    public boolean deleteChestfly(long rowId) {
         String where = KEY_ROWID + "=" + rowId;
         return db.delete(DATABASE_TABLE5, where, null) !=0;
     }
 
-    public void deleteAllchestfly() {
-        Cursor c = getchestfly();
+    public void deleteAllChestfly() {
+        Cursor c = getChestFly();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
-                deletechestfly(c.getLong((int) rowId));
+                deleteChestfly(c.getLong((int) rowId));
             }while(c.moveToNext());
         }
         c.close();
     }
 
-    public boolean deleteRowpullups(long rowId) {
+    public boolean deleteRowPullups(long rowId) {
         String where = KEY_ROWID + "=" + rowId;
         return db.delete(DATABASE_TABLE6, where, null) !=0;
     }
 
-    public void deleteAllpullups() {
-        Cursor c = getpullups();
+    public void deleteAllPullups() {
+        Cursor c = getPullups();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
-                deleteRowpullups(c.getLong((int) rowId));
+                deleteRowPullups(c.getLong((int) rowId));
             }while(c.moveToNext());
         }
         c.close();
     }
 
-    public boolean deleteRowhammercurls(long rowId) {
+    public boolean deleteRowHammercurls(long rowId) {
         String where = KEY_ROWID + "=" + rowId;
         return db.delete(DATABASE_TABLE7, where, null) !=0;
     }
 
-    public void deleteAllhammercurls() {
-        Cursor c = gethammercurls();
+    public void deleteAllHammercurls() {
+        Cursor c = getHammercurls();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
-                deleteRowhammercurls(c.getLong((int) rowId));
+                deleteRowHammercurls(c.getLong((int) rowId));
             }while(c.moveToNext());
         }
         c.close();
@@ -298,7 +283,7 @@ public class DBTracker {
     }
 
     public void deleteAllDeadlift() {
-        Cursor c = getdeadlift();
+        Cursor c = getDeadlift();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
@@ -330,7 +315,7 @@ public class DBTracker {
     }
 
     public void deleteAllSquat() {
-        Cursor c = getsquat();
+        Cursor c = getSquat();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
@@ -346,8 +331,8 @@ public class DBTracker {
         return db.delete(DATABASE_TABLE11, where, null) !=0;
     }
 
-    public void deleteAlllegpress() {
-        Cursor c = getlegpress();
+    public void deleteAllLegpress() {
+        Cursor c = getLegpress();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
@@ -358,49 +343,33 @@ public class DBTracker {
     }
 
 
-    public boolean deleteRowlegextensions(long rowId) {
+    public boolean deleteRowLegExtensions(long rowId) {
         String where = KEY_ROWID + "=" + rowId;
         return db.delete(DATABASE_TABLE12, where, null) !=0;
     }
 
-    public void deleteAlllegcurl() {
-        Cursor c = getlegcurl();
+    public void deleteAllLegCurl() {
+        Cursor c = getLegCurl();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
-                deleteRowlegcurl(c.getLong((int) rowId));
+                deleteRowLegCurl(c.getLong((int) rowId));
             }while(c.moveToNext());
         }
         c.close();
     }
 
-    public boolean deleteRowlegcurl(long rowId) {
+    public boolean deleteRowLegCurl(long rowId) {
         String where = KEY_ROWID + "=" + rowId;
         return db.delete(DATABASE_TABLE13, where, null) !=0;
     }
 
-    public void deleteAlllegextensions() {
-        Cursor c = getlegextensions();
+    public void deleteAllLegExtensions() {
+        Cursor c = getLegExtensions();
         long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
         if (c.moveToFirst()){
             do {
-                deleteRowlegextensions(c.getLong((int) rowId));
-            }while(c.moveToNext());
-        }
-        c.close();
-    }
-
-    public boolean deleteRowweighttracker(long rowId) {
-        String where = KEY_ROWID + "=" + rowId;
-        return db.delete(DATABASE_TABLE14, where, null) !=0;
-    }
-
-    public void deleteAllweighttracker() {
-        Cursor c = getweighttracker();
-        long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
-        if (c.moveToFirst()){
-            do {
-                deleteRowweighttracker(c.getLong((int) rowId));
+                deleteRowLegExtensions(c.getLong((int) rowId));
             }while(c.moveToNext());
         }
         c.close();
@@ -413,6 +382,7 @@ public class DBTracker {
 
         }
 
+        //Executes all code for database creation.
         @Override
         public void onCreate(SQLiteDatabase db) {
             db.execSQL(DATABASE_CREATE0);
@@ -428,9 +398,6 @@ public class DBTracker {
             db.execSQL(DATABASE_CREATE10);
             db.execSQL(DATABASE_CREATE11);
             db.execSQL(DATABASE_CREATE12);
-            db.execSQL(DATABASE_CREATE13);
-            db.execSQL(DATABASE_CREATE14);
-
         }
 
         @Override
@@ -451,15 +418,16 @@ public class DBTracker {
     }
 
 
-    public long insertdumbbellpress(String date, String weight, String reps) throws SQLException{
+    //Insert stats for database.
+    public long insertDumbbellPress(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
         initialValues.put(COL_3,reps);
         return db.insert(DATABASE_TABLE0,null,initialValues);
     }
-
-    public Cursor getdumbbellpress() {
+    //Get stats from a specific database.
+    public Cursor getDumbbellPress() {
         String where = null;
         Cursor c = db.query(true, DATABASE_TABLE0, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -468,7 +436,7 @@ public class DBTracker {
         return c;
     }
 
-    public long inserttridips(String date, String weight, String reps) throws SQLException{
+    public long insertTriDips(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
@@ -476,7 +444,7 @@ public class DBTracker {
         return db.insert(DATABASE_TABLE1,null,initialValues);
     }
 
-    public Cursor gettridips() {
+    public Cursor getTriDips() {
         String where = null;
         Cursor c = db.query(true,DATABASE_TABLE1, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -485,7 +453,7 @@ public class DBTracker {
         return c;
     }
 
-    public long insertidumbbellpress(String date, String weight, String reps) throws SQLException{
+    public long insertiDumbbellPress(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
@@ -493,7 +461,7 @@ public class DBTracker {
         return db.insert(DATABASE_TABLE2,null,initialValues);
     }
 
-    public Cursor getidumbellpress() {
+    public Cursor getiDumbellPress() {
         String where = null;
         Cursor c = db.query(true,DATABASE_TABLE2, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -502,7 +470,7 @@ public class DBTracker {
         return c;
     }
 
-    public long inserttripulldown(String date, String weight, String reps) throws SQLException{
+    public long insertTriPulldown(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
@@ -510,7 +478,7 @@ public class DBTracker {
         return db.insert(DATABASE_TABLE3,null,initialValues);
     }
 
-    public Cursor gettripulldown() {
+    public Cursor getTriPulldown() {
         String where = null;
         Cursor c = db.query(true,DATABASE_TABLE3, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -519,7 +487,7 @@ public class DBTracker {
         return c;
     }
 
-    public long insertmchestpress(String date, String weight, String reps) throws SQLException{
+    public long insertMchestPress(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
@@ -527,7 +495,7 @@ public class DBTracker {
         return db.insert(DATABASE_TABLE4,null,initialValues);
     }
 
-    public Cursor getmchestpress() {
+    public Cursor getMchestPress() {
         String where = null;
         Cursor c = db.query(true,DATABASE_TABLE4, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -536,7 +504,7 @@ public class DBTracker {
         return c;
     }
 
-    public long insertchestfly(String date, String weight, String reps) throws SQLException{
+    public long insertChestFly(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
@@ -544,7 +512,7 @@ public class DBTracker {
         return db.insert(DATABASE_TABLE5,null,initialValues);
     }
 
-    public Cursor getchestfly() {
+    public Cursor getChestFly() {
         String where = null;
         Cursor c = db.query(true,DATABASE_TABLE5, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -554,7 +522,7 @@ public class DBTracker {
     }
 
 
-    public long insertpullups(String date, String weight, String reps) throws SQLException{
+    public long insertPullups(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
@@ -562,7 +530,7 @@ public class DBTracker {
         return db.insert(DATABASE_TABLE6,null,initialValues);
     }
 
-    public Cursor getpullups() {
+    public Cursor getPullups() {
         String where = null;
         Cursor c = db.query(true,DATABASE_TABLE6, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -571,7 +539,7 @@ public class DBTracker {
         return c;
     }
 
-    public long inserthammercurls(String date, String weight, String reps) throws SQLException{
+    public long insertHammercurls(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
@@ -579,7 +547,7 @@ public class DBTracker {
         return db.insert(DATABASE_TABLE7,null,initialValues);
     }
 
-    public Cursor gethammercurls() {
+    public Cursor getHammercurls() {
         String where = null;
         Cursor c = db.query(true,DATABASE_TABLE7, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -587,7 +555,7 @@ public class DBTracker {
         }
         return c;
     }
-    public long insertdeadlift(String date, String weight, String reps) throws SQLException{
+    public long insertDeadlift(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
@@ -595,7 +563,7 @@ public class DBTracker {
         return db.insert(DATABASE_TABLE8,null,initialValues);
     }
 
-    public Cursor getdeadlift() {
+    public Cursor getDeadlift() {
         String where = null;
         Cursor c = db.query(true,DATABASE_TABLE8, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -619,7 +587,7 @@ public class DBTracker {
         }
         return c;
     }
-    public long insertsquat(String date, String weight, String reps) throws SQLException{
+    public long insertSquat(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
@@ -627,7 +595,7 @@ public class DBTracker {
         return db.insert(DATABASE_TABLE10,null,initialValues);
     }
 
-    public Cursor getsquat() {
+    public Cursor getSquat() {
         String where = null;
         Cursor c = db.query(true,DATABASE_TABLE10, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -635,7 +603,7 @@ public class DBTracker {
         }
         return c;
     }
-    public long insertlegpress(String date, String weight, String reps) throws SQLException{
+    public long insertLegpress(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
@@ -643,7 +611,7 @@ public class DBTracker {
         return db.insert(DATABASE_TABLE11,null,initialValues);
     }
 
-    public Cursor getlegpress() {
+    public Cursor getLegpress() {
         String where = null;
         Cursor c = db.query(true,DATABASE_TABLE11, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -651,7 +619,7 @@ public class DBTracker {
         }
         return c;
     }
-    public long insertlegextentions(String date, String weight, String reps) throws SQLException{
+    public long insertLegExtentions(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
@@ -659,7 +627,7 @@ public class DBTracker {
         return db.insert(DATABASE_TABLE12,null,initialValues);
     }
 
-    public Cursor getlegextensions() {
+    public Cursor getLegExtensions() {
         String where = null;
         Cursor c = db.query(true,DATABASE_TABLE12, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -668,7 +636,7 @@ public class DBTracker {
         return c;
     }
 
-    public long insertlegcurl(String date, String weight, String reps) throws SQLException{
+    public long insertLegCurl(String date, String weight, String reps) throws SQLException{
         ContentValues initialValues = new ContentValues();
         initialValues.put(COL_1,date);
         initialValues.put(COL_2,weight);
@@ -676,7 +644,7 @@ public class DBTracker {
         return db.insert(DATABASE_TABLE13,null,initialValues);
     }
 
-    public Cursor getlegcurl() {
+    public Cursor getLegCurl() {
         String where = null;
         Cursor c = db.query(true,DATABASE_TABLE13, ALL_KEYS, where, null,null,null,null,null);
         if(c != null){
@@ -684,23 +652,6 @@ public class DBTracker {
         }
         return c;
     }
-    public long insertweighttracker(String date, String weight) throws SQLException{
-        ContentValues initialValues = new ContentValues();
-        initialValues.put(COL_1,date);
-        initialValues.put(COL_2,weight);
-        return db.insert(DATABASE_TABLE14,null,initialValues);
+
     }
-
-    public Cursor getweighttracker() {
-        String where = null;
-        Cursor c = db.query(true,DATABASE_TABLE14, ALL_KEYS1, where, null,null,null,null,null);
-        if(c != null){
-            c.moveToFirst();
-        }
-        return c;
-    }
-
-
-
-}
 
