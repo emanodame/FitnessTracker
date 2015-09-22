@@ -12,6 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class CustomSwipeAdapter extends PagerAdapter {
+    /*
+    Gets the images from files.
+     */
     private int[] image_resources = {R.drawable.chestpress,R.drawable.dips,R.drawable.chestpress,R.drawable.triceppulldown,R.drawable.machinechest,R.drawable.chestfly,R.drawable.pullups,R.drawable.hammercurls,R.drawable.deadlift,R.drawable.bcurl,R.drawable.squat,R.drawable.legpress,R.drawable.legextensions,R.drawable.legcurl,};
     private Context ctx; //Gets the context of a current state or application. Tells program what is going on somewhere else.
     private LayoutInflater layoutInflater;  //USed to instantiate layout XML files to View Objct.
@@ -24,6 +27,7 @@ public class CustomSwipeAdapter extends PagerAdapter {
     }
 
     @Override
+    //Tracks count of specific exercise on SwipeAdapter.
     public int getCount() {
         return image_resources.length;
     }
@@ -34,6 +38,7 @@ public class CustomSwipeAdapter extends PagerAdapter {
     }
 
     @Override
+    //Instantiates items for swipes. Gets  track of position.
     public Object instantiateItem(ViewGroup container, int position) {
         layoutInflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View item_view = layoutInflater.inflate(R.layout.swipe_layout, container, false);
@@ -45,6 +50,7 @@ public class CustomSwipeAdapter extends PagerAdapter {
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
+            //Notices the specific position and diverts to subclass depending on click.
             public void onClick(View view) {
                 switch(position){
                  case 0:
