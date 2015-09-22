@@ -14,6 +14,7 @@ import java.sql.SQLException;
  */
 public class Deadlift extends Exercise {
     @Override
+    //Creates the Content view specifically for Deadlift. Opens BCurl Table.
     public  void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.deadlift);
@@ -29,8 +30,9 @@ public class Deadlift extends Exercise {
 
     @Override
     public void insert() {
+        //Inserts Deadlift stats into database.
         try {
-            dbtrack.insertdeadlift(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
+            dbtrack.insertDeadlift(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -38,7 +40,8 @@ public class Deadlift extends Exercise {
 
     @Override
     public void populateTrackListView() {
-        Cursor cursor = dbtrack.getdeadlift();
+        //Gets stats from database.
+        Cursor cursor = dbtrack.getDeadlift();
         String[] fromFieldnames = new String[]{DBTracker.COL_1, DBTracker.COL_2, DBTracker.COL_3};
         int[] toViewIDs = new int[]{R.id.btnDate, R.id.txtWeight, R.id.btnReps};
         SimpleCursorAdapter myCursorAdapter;
@@ -49,12 +52,14 @@ public class Deadlift extends Exercise {
     }
 
     @Override
+
     public void delete() {
         dbtrack.deleteAllDeadlift();
     }
-
+    //Delete the whole Deadlift database.
     @Override
     public boolean longClick() {
+        //Long click Delete. This deletes a specific row upon long click.
         ListView myList = (ListView)findViewById(R.id.statsview);
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
