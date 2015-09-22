@@ -15,6 +15,7 @@ import java.sql.SQLException;
 public class DumbbellPress extends Exercise {
 
     @Override
+    //Creates the Content view specifically for DumbellPress. Opens BCurl Table.
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dumbbellpress);
@@ -30,8 +31,9 @@ public class DumbbellPress extends Exercise {
 
     @Override
     public void insert() {
+    //Inserts DumbellPress stats into database.
         try {
-            dbtrack.insertdumbbellpress(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
+            dbtrack.insertDumbbellPress(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -39,7 +41,8 @@ public class DumbbellPress extends Exercise {
 
     @Override
     public void populateTrackListView() {
-        Cursor cursor = dbtrack.getdumbbellpress();
+        //Gets stats from database.
+        Cursor cursor = dbtrack.getDumbbellPress();
         String[] fromFieldnames = new String[]{DBTracker.COL_1, DBTracker.COL_2, DBTracker.COL_3};
         int[] toViewIDs = new int[]{R.id.btnDate, R.id.txtWeight, R.id.btnReps};
         SimpleCursorAdapter myCursorAdapter;
@@ -53,9 +56,10 @@ public class DumbbellPress extends Exercise {
     public void delete() {
         dbtrack.deleteAllDumbbellPress();
     }
-
+    //Delete the whole DumbellPress database.
     @Override
     public boolean longClick() {
+        //Long click Delete. This deletes a specific row upon long click.
         ListView myList = (ListView)findViewById(R.id.statsview);
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
