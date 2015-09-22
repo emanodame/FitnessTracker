@@ -9,11 +9,9 @@ import android.widget.SimpleCursorAdapter;
 
 import java.sql.SQLException;
 
-/**
- * Created by Eman on 03/09/2015.
- */
 public class BCurl extends Exercise {
     @Override
+    //Creates the Content view specifically for bcurl. Opens BCurl Table.
     public  void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bcurl);
@@ -29,6 +27,7 @@ public class BCurl extends Exercise {
 
     @Override
     public void insert() {
+        //Inserts BCurl stats into database.
         try {
             dbtrack.insertbcurl(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
         } catch (SQLException e) {
@@ -38,6 +37,7 @@ public class BCurl extends Exercise {
 
     @Override
     public void populateTrackListView() {
+        //Gets stats from database.
         Cursor cursor = dbtrack.getbcurl();
         String[] fromFieldnames = new String[]{DBTracker.COL_1, DBTracker.COL_2, DBTracker.COL_3};
         int[] toViewIDs = new int[]{R.id.btnDate, R.id.txtWeight, R.id.btnReps};
@@ -50,11 +50,13 @@ public class BCurl extends Exercise {
 
     @Override
     public void delete() {
+        //Delete the whole BCurl database.
         dbtrack.deleteAllbcurl();
     }
 
     @Override
     public boolean longClick() {
+        //Long click Delete. This deletes a specific row upon long click.
         ListView myList = (ListView)findViewById(R.id.statsview);
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
