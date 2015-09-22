@@ -15,6 +15,7 @@ import java.sql.SQLException;
 public class Squats extends Exercise{
     @Override
     public  void onCreate(Bundle savedInstanceState) {
+        //Creates the Content view specifically for Squats. Opens Squats Table.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.squat);
         try {
@@ -29,8 +30,9 @@ public class Squats extends Exercise{
 
     @Override
     public void insert() {
+        //Inserts Squats stats into database.
         try {
-            dbtrack.insertsquat(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
+            dbtrack.insertSquat(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -38,7 +40,8 @@ public class Squats extends Exercise{
 
     @Override
     public void populateTrackListView() {
-               Cursor cursor = dbtrack.getsquat();
+        //Gets stats from database.
+               Cursor cursor = dbtrack.getSquat();
         String[] fromFieldnames = new String[]{DBTracker.COL_1, DBTracker.COL_2, DBTracker.COL_3};
         int[] toViewIDs = new int[]{R.id.btnDate, R.id.txtWeight, R.id.btnReps};
         SimpleCursorAdapter myCursorAdapter;
@@ -50,11 +53,13 @@ public class Squats extends Exercise{
 
     @Override
     public void delete() {
+        //Delete the whole Squats database.
         dbtrack.deleteAllSquat();
     }
 
     @Override
     public boolean longClick() {
+        //Long click Delete. This deletes a specific row upon long click.
         ListView myList = (ListView)findViewById(R.id.statsview);
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
