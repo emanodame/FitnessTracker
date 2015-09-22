@@ -12,12 +12,12 @@ import java.sql.SQLException;
 /**
  * Created by Eman on 03/09/2015.
  */
-public class LegExtension extends Exercise {
+public class LegCurl extends Exercise {
     @Override
+    //Creates the Content view specifically for LegCurl. Opens LegCurl Table.
     public  void onCreate(Bundle savedInstanceState) {
-        //Creates the Content view specifically for LegExtension. Opens LegExtension Table.
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.legextension);
+        setContentView(R.layout.legcurl);
         try {
             openTrackDB();
         } catch (SQLException e) {
@@ -30,9 +30,9 @@ public class LegExtension extends Exercise {
 
     @Override
     public void insert() {
-        //Inserts LegExtension stats into database.
+        //Inserts LEgCurl stats into database.
         try {
-            dbtrack.insertLegExtentions(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
+            dbtrack.insertLegCurl(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -41,7 +41,7 @@ public class LegExtension extends Exercise {
     @Override
     public void populateTrackListView() {
         //Gets stats from database.
-        Cursor cursor = dbtrack.getLegExtensions();
+        Cursor cursor = dbtrack.getLegCurl();
         String[] fromFieldnames = new String[]{DBTracker.COL_1, DBTracker.COL_2, DBTracker.COL_3};
         int[] toViewIDs = new int[]{R.id.btnDate, R.id.txtWeight, R.id.btnReps};
         SimpleCursorAdapter myCursorAdapter;
@@ -53,18 +53,19 @@ public class LegExtension extends Exercise {
 
     @Override
     public void delete() {
-        //Delete the whole LegExtension database
-        dbtrack.deleteAllLegExtensions();
+        //Delete the whole LegCurl database.
+        dbtrack.deleteAllLegCurl();
     }
 
     @Override
     public boolean longClick() {
         //Long click Delete. This deletes a specific row upon long click.
+
         ListView myList = (ListView)findViewById(R.id.statsview);
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                dbtrack.deleteRowLegExtensions(l);
+                dbtrack.deleteRowLegCurl(l);
                 populateTrackListView();
 
             }
