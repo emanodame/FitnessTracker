@@ -15,6 +15,7 @@ import java.sql.SQLException;
 public class Pullups extends Exercise {
     @Override
     public  void onCreate(Bundle savedInstanceState) {
+        //Creates the Content view specifically for Pullups. Opens Pullups Table.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pullups);
         try {
@@ -29,8 +30,9 @@ public class Pullups extends Exercise {
 
     @Override
     public void insert() {
+        //Inserts Pullups stats into database.
         try {
-            dbtrack.insertpullups(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
+            dbtrack.insertPullups(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -38,7 +40,8 @@ public class Pullups extends Exercise {
 
     @Override
     public void populateTrackListView() {
-        Cursor cursor = dbtrack.getpullups();
+        //Gets stats from database.
+        Cursor cursor = dbtrack.getPullups();
         String[] fromFieldnames = new String[]{DBTracker.COL_1, DBTracker.COL_2, DBTracker.COL_3};
         int[] toViewIDs = new int[]{R.id.btnDate, R.id.txtWeight, R.id.btnReps};
         SimpleCursorAdapter myCursorAdapter;
@@ -50,16 +53,18 @@ public class Pullups extends Exercise {
 
     @Override
     public void delete() {
-        dbtrack.deleteAllpullups();
+        //Delete the whole Pullups database.
+        dbtrack.deleteAllPullups();
     }
 
     @Override
     public boolean longClick() {
+        //Long click Delete. This deletes a specific row upon long click.
         ListView myList = (ListView)findViewById(R.id.statsview);
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                dbtrack.deleteRowpullups(l);
+                dbtrack.deleteRowPullups(l);
                 populateTrackListView();
 
             }
