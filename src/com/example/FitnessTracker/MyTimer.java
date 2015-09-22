@@ -29,7 +29,8 @@ public class  MyTimer extends Activity {
         btnStop = (Button) findViewById(R.id.btnStop);
         btnStop.setVisibility(View.INVISIBLE);
 
-        final CounterClass timer = new CounterClass(initialtime,1000);
+
+        final CounterClass timer = new CounterClass(initialtime,1000); //Set at 60000 which is one minute. 1000ms decremenets every second.
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,6 +68,7 @@ public class  MyTimer extends Activity {
 
         @Override
         public void onFinish() {
+            //Vibration set when countdown finish.
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(2500);
             btnStop.setVisibility(View.INVISIBLE);
