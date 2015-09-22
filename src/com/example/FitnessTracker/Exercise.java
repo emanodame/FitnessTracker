@@ -16,6 +16,9 @@ import java.text.DecimalFormat;
 import java.util.Calendar;
 
 public class Exercise extends Activity {
+    /*
+    The section for actually inputing your stats to the database.
+     */
 
     Button savebutton, cancelbutton, gobutton, nobutton, addnote, deletenotes;
     EditText dateinput, weightinput, repsinput;
@@ -36,15 +39,17 @@ public class Exercise extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         DecimalFormat mFormat = new DecimalFormat("00");
-        mFormat.setRoundingMode(RoundingMode.DOWN);
+        mFormat.setRoundingMode(RoundingMode.DOWN); //This is for formatting the Month and Date. Making sure it's correctly two figures each.
 
 
         switch (item.getItemId()) {
             case R.id.addinfo:
+                //Into Dialog.
                 Dialog dialog = new Dialog(Exercise.this);
                 dialog.setTitle("        Enter your STATS brah");
                 dialog.setContentView(R.layout.datainput);
 
+                //Far left option. Already autocompleted Date.
                 dateinput = (EditText) dialog.findViewById(R.id.editDate);
                 final Calendar c = Calendar.getInstance();
                 dd = c.get(Calendar.DAY_OF_MONTH);
@@ -58,12 +63,14 @@ public class Exercise extends Activity {
 
                 dialog.show();
 
+                //Pointing to XML buttons.
                 weightinput = (EditText) dialog.findViewById(R.id.editWeight);
                 repsinput = (EditText) dialog.findViewById(R.id.editReps);
 
                 savebutton = (Button) dialog.findViewById(R.id.btnSave);
                 cancelbutton = (Button) dialog.findViewById(R.id.btnCancel);
 
+                //Upon clicking save it opens to db and saves stats.
                 savebutton.setOnClickListener(new View.OnClickListener() {
 
 
@@ -85,6 +92,7 @@ public class Exercise extends Activity {
                     }
                 });
 
+                //Cancels the dialog.
                 cancelbutton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -98,6 +106,8 @@ public class Exercise extends Activity {
                 return super.onOptionsItemSelected(item);
 
 
+            /*
+            Implementing notes later.
             case R.id.notes:
                 Dialog notesDialog = new Dialog(Exercise.this);
                 notesDialog.setContentView(R.layout.notes);
@@ -154,7 +164,7 @@ public class Exercise extends Activity {
 
                 return true;
 
-
+    */
             case R.id.graph:
                 Dialog graphdialog = new Dialog(Exercise.this);
                 graphdialog.setTitle("COMING SOON!");
@@ -162,6 +172,7 @@ public class Exercise extends Activity {
                 return true;
 
 
+            //Option for deleting the whole database.
             case R.id.delete:
                 Dialog warning = new Dialog(Exercise.this);
                 warning.setTitle("DON'T ACT RECKLESS-CTMN");
@@ -203,11 +214,15 @@ public class Exercise extends Activity {
         dbtrack.open();
     }
 
+    /*
     protected void openNotesDB() throws SQLException {
         dbnote = new DBNotes(this);
         dbnote.open();
-    }
 
+    }
+    */
+
+    //This all depends on specific exercises. Different tables used.
     protected void insert() {
     }
 
