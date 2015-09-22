@@ -12,8 +12,12 @@ import java.sql.SQLException;
 /**
  * Created by Eman on 02/09/2015.
  */
+/*
+This is for Incline Dumbell Press
+ */
 public class IDumbbellPress extends Exercise {
     @Override
+    //Creates the Content view specifically for IDBPress. Opens IDBPress Table.
     public  void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.idumbbellpress);
@@ -29,8 +33,9 @@ public class IDumbbellPress extends Exercise {
 
     @Override
     public void insert() {
+        //Inserts Incline DB press. stats into database.
         try {
-            dbtrack.insertidumbbellpress(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
+            dbtrack.insertiDumbbellPress(dateinput.getText().toString(), weightinput.getText().toString(), repsinput.getText().toString());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -38,7 +43,8 @@ public class IDumbbellPress extends Exercise {
 
     @Override
     public void populateTrackListView() {
-        Cursor cursor = dbtrack.getidumbellpress();
+        //Gets stats from database.
+        Cursor cursor = dbtrack.getiDumbellPress();
         String[] fromFieldnames = new String[]{DBTracker.COL_1, DBTracker.COL_2, DBTracker.COL_3};
         int[] toViewIDs = new int[]{R.id.btnDate, R.id.txtWeight, R.id.btnReps};
         SimpleCursorAdapter myCursorAdapter;
@@ -50,9 +56,10 @@ public class IDumbbellPress extends Exercise {
 
     @Override
     public void delete() {
-        dbtrack.deleteAllidumbbellpress();
+        dbtrack.deleteAllDumbellPress();
     }
-
+    //Delete the whole BCurl database.
+    /*
     @Override
     public boolean longClick() {
         ListView myList = (ListView)findViewById(R.id.statsview);
@@ -65,4 +72,5 @@ public class IDumbbellPress extends Exercise {
             }
         });return true;
     }
+    */
 }
