@@ -38,11 +38,11 @@ public class WeightConverter extends Activity {
                          switch (selected_id) {
                              case 2131099694: //change this into a final id
                                  kgtopounds();
-                                 System.out.println("Work???");
+                
                                  break;
                              case 2131099695: //change this into a final id
                                  poundstokg();
-                                 System.out.println("please work??");
+                                
                                  break;
                          }
                      }
